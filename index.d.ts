@@ -978,7 +978,7 @@ export interface RowBreak {
 export interface WorksheetModel {
 	id: number;
 	name: string;
-	orderNo: string;
+	orderNo: number;
 	checkIntersection: boolean;
 	merges: any;
 	// dataValidations: this.dataValidations.model,
@@ -1089,7 +1089,7 @@ export interface Worksheet {
 	name: string;
 	readonly workbook: Workbook;
 	readonly hasMerges: boolean;
-	orderNo: string;
+	orderNo: number;
 	checkIntersection: boolean;
 	merges: any;
 	readonly dimensions: Range;
