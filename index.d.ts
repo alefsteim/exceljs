@@ -1089,7 +1089,9 @@ export interface Worksheet {
 	name: string;
 	readonly workbook: Workbook;
 	readonly hasMerges: boolean;
-
+	orderNo: string;
+	checkIntersection: boolean;
+	merges: any;
 	readonly dimensions: Range;
 	/**
 	 * Contains information related to how a worksheet is printed
