@@ -386,24 +386,24 @@ export type CellValue =
 	| CellFormulaValue | CellSharedFormulaValue;
 
 
-	export interface CommentMargins {
-		insetmode: 'auto' | 'custom';
-		inset: Number[];
-	}
+export interface CommentMargins {
+	insetmode: 'auto' | 'custom';
+	inset: Number[];
+}
 
-	export interface CommentProtection {
-		locked: 'True' | 'False';
-		lockText: 'True' | 'False';
-	}
+export interface CommentProtection {
+	locked: 'True' | 'False';
+	lockText: 'True' | 'False';
+}
 
-	export type CommentEditAs = 'twoCells' | 'oneCells' | 'absolute';
+export type CommentEditAs = 'twoCells' | 'oneCells' | 'absolute';
 
-	export interface Comment {
-		texts?: RichText[];
-		margins?: Partial<CommentMargins>;
-		protection?: Partial<CommentProtection>;
-		editAs?: CommentEditAs;
-	}
+export interface Comment {
+	texts?: RichText[];
+	margins?: Partial<CommentMargins>;
+	protection?: Partial<CommentProtection>;
+	editAs?: CommentEditAs;
+}
 
 export interface CellModel {
 	address: Address;
@@ -978,6 +978,9 @@ export interface RowBreak {
 export interface WorksheetModel {
 	id: number;
 	name: string;
+	orderNo: string;
+	checkIntersection: boolean;
+	merges: any;
 	// dataValidations: this.dataValidations.model,
 	properties: WorksheetProperties;
 	pageSetup: Partial<PageSetup>;
